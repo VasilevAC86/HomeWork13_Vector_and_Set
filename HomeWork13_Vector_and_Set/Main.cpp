@@ -82,7 +82,8 @@ int main() {
 										dictionary.push_back("not");
 									}								
 									else
-										dictionary.push_back(word);				
+										if (word != "")
+											dictionary.push_back(word);				
 	}	
 	in.close(); // После считывания из файла информации закрываем его
 	std::cout << "Data was successfully read from the file.\nFile \033[93m" << path << "\033[0m is closed.\n\n";
@@ -174,7 +175,8 @@ int main() {
 										unique_dictionary.insert("not");
 									}
 									else
-										unique_dictionary.insert(word);										
+										if (word != "")
+											unique_dictionary.insert(word);										
 	}
 	in.close(); // После считывания из файла информации закрываем его
 	std::cout << "Data was successfully read from the file.\nFile \033[93m" << path << "\033[0m is closed.\n\n";
